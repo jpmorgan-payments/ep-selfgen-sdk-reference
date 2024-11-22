@@ -1,1 +1,1 @@
-# eb-selfgen-sdk-reference
+# ep-selfgen-sdk-reference
