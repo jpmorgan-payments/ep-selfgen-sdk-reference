@@ -21,7 +21,7 @@ Morgan [Payments Developer Portal](https://developer.payments.jpmorgan.com/api/h
 You can also walk through the steps to enable mutual TLS authentication and digital signing logic on the same API
 client.
 
-To generate the simple API client, you can use  [OpenAPI Generator](https://openapi-generator.tech/). There are multiple
+To generate the simple API client, you can use [OpenAPI Generator](https://openapi-generator.tech/). There are multiple
 ways to use the OpenAPI Generator, but in
 this guide you only need to look at its plugin
 capability
@@ -113,7 +113,7 @@ In the pom file of your application, add the OpenAPI Generator plugin.
     <version>1.18.34</version>
   </dependency>
 </dependencies>
-   ```
+```
 
 </details>
 
@@ -138,14 +138,14 @@ top of.
 ### Enable mTLS authentication and digital signing
 
 > [Disclaimer]
-This reference code is a simple form of implementing mTLS authentication with the certificates being present on the file system. We do not recommend using this implementation as is.
+> This reference code is a simple form of implementing mTLS authentication with the certificates being present on the file system. We do not recommend using this implementation as is.
 > Please ensure the certificates are stored as per your organization guidelines.
 
 To enable mutual TLS authentication and payload signing capability on top of the generated API
 client, add the following code under the sources in your project
 
 - MtlsConfiguration - [see here](src/main/java/org/example/config/MTLSConfiguration.java)
-- RestTemplateConfigurer -  [see here](src/main/java/org/example/config/RestTemplateConfigurer.java)
+- RestTemplateConfigurer - [see here](src/main/java/org/example/config/RestTemplateConfigurer.java)
 - The code above will need the following dependencies added to your pom file
 
 <details>
@@ -186,6 +186,8 @@ the [developer portal API's](https://developer.payments.jpmorgan.com/api/home).
 
 You could either use the above project to implement your business interaction with JPMorgan payments API's or package
 the above generated code above as an artifact to use in your business project.
+
+<!-- markdown-link-check-disable -->
 
 #### Getting Started against the mock - without mTLS Auth
 
@@ -241,6 +243,8 @@ public class Example {
 Please note that the above code can be used to integrate against our mock
 environment - https://api-mock.payments.jpmorgan.com/
 and does not require any type of authentication.
+
+<!-- markdown-link-check-enable -->
 
 #### Getting Started against the real API - with mTLS auth
 
@@ -328,9 +332,7 @@ Below is an example of how the callback event looks like
     "httpStatus": 422,
     "traceId": "string",
     "requestId": "string",
-    "context": [
-      {}
-    ]
+    "context": [{}]
   },
   "resourceObject": {
     "id": "string",
