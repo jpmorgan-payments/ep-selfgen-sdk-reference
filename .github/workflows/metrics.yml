@@ -4,6 +4,7 @@
 name: Run metrics
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "37 09 * * *"
 
